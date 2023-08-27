@@ -1,0 +1,97 @@
+Next.js 13 Thapa
+
+In public your photos will be there
+In app folder you can have your server components(that can directly talk with server)
+In Layout.js -> The the children is what being rendered and that comes from page.js(this is your main page)
+global.css where your all css would be
+
+Added styles folder having cass files in App folder
+Then suppose u wannt about page u create about folder and inside it created page.js(it will be same like index,js)  
+now in your browser when u write /about u can see that page
+
+While creating a project it was asking of @ that refers to src
+when we import anything like @/app means src/app
+
+Everything in next.js is componet like u have to import Image compoent from Next
+also Link , now u just give href in in it no <a> tag
+
+In image height and width must be given
+
+in global.css write only thatcss which you want to effect globally
+
+
+Auto support of google fonts, fonts can be use in layoutt so to apply in whole
+
+
+In order to create a dynamic route for example unique movies details 
+like movies/1de
+
+so for that inside movies folder create a folder with sq brackets like [id] and inside it then page.js ->
+this is known as slug(dynamic routing)
+
+
+In order to add network images u need to add domain name in next.config.js
+
+
+take id from params to fetch details of particular movie
+
+create a file called loading.js and anything u make there it will be serve as loader bfrevery page gets load
+
+just to halt any async func or component for 2 second added this  line to show loader
+
+await new Promise(resolve => setTimeout(resolve, 2000));
+
+for 404 page just make not-found.js file and u r done but at that time due to beta version styles weren't applied
+
+there are different ways to style as well if in any className there is - then you can use style like styles 
+className={heroStyles['custom-shape-divider-bottom-1681647578']}
+
+
+For example if you want to have style of contact or any other page within its folder then u can have, 
+so its style will only remain till its page , meanwhile u can have components ccss in global 
+
+
+
+---  afer 1 32
+input fields of contact form mn tags mn name wahi jo mongo ki field name and also obj of state nmn same  take ek function
+
+
+client vs server
+
+fetching, database connection ->server
+hooks like useState, class components ->client
+
+see the documentation
+
+
+for database connection
+
+create a utils folder on same level of app
+then any js file annd paste code what is given by thapa
+basically it prevents the new connection if there exist already so we use power of cache for that
+
+
+then create models folder on same level
+and create scehma file inside it
+and create model of it
+
+Next
+ap backend to hai nhi  k express se api bnae
+so app mn api ka folder bnae
+usk andr like contact/route.js bnae aur usme function likhe
+it will act like api/contact
+contact ki jga kch bhi lkn usk andr route.js hi hona chaye
+
+
+Then POST ki request thi to isme body jo arahi use bi req.json() krna hai
+phir b conn krwaen
+Jo response hm send krte the usk lie NextResponse.json() krk hoga
+
+
+then in form component do write the submit function
+
+also in next.config,js add       serverComponentsExternalPackages: ["mongoose"],
+
+
+
+Note" .env didn't work in this project so I gave those credentials inside file

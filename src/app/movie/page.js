@@ -7,21 +7,28 @@ const Movie = async () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
 
 
+   console.log("in")
+
     const url = process.env.RAPID_KEY;
 
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'c02fbc68bcmshbcf86db29a2c655p12007cjsn9adea8d51505',
+            'X-RapidAPI-Key': '88d9057c3emsh4afcdd662125797p1fd819jsn2025b642d5ab',
             'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
         }
     };
 
-    const res = await fetch(url, options);
+    console.log("url",url,options)
+
+    const res = await fetch("https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en", options);
+  
     const data = await res.json();
+    console.log("🚀 ~ file: page.js:25 ~ Movie ~ data:", data)
+  
     const main_data = data.titles;
     console.log("🚀 ~ file: page.js:23 ~ Movie ~ main_data:", main_data)
-    console.log(main_data.jawSummary)
+    console.log("hello",main_data.jawSummary)
 
     return (
         <>
